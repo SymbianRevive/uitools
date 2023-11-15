@@ -21,6 +21,9 @@
 #include <string>
 #include <iosfwd>
 #include <vector>
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
 #include <CdlDef.h>
 
 namespace CdlCompilerToolkit {

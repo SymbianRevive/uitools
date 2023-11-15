@@ -14,6 +14,8 @@
 * Description:
 *
 */
+#include <locale>
+
 #include "CdlTkPriv.h"
 
 #include <string>
@@ -181,7 +183,7 @@ string CdlTkUtil::ToLower(const string& aString)
 	{
 	string r;
 	r.resize(aString.size());
-	transform(aString.begin(), aString.end(), r.begin(), tolower);
+	transform(aString.begin(), aString.end(), r.begin(), [](char c) { return std::tolower<char>(c, std::locale("C")); });
 	return r;
 	}
 
@@ -189,7 +191,7 @@ string CdlTkUtil::ToUpper(const string& aString)
 	{
 	string r;
 	r.resize(aString.size());
-	transform(aString.begin(), aString.end(), r.begin(), toupper);
+	transform(aString.begin(), aString.end(), r.begin(), [](char c) { return std::toupper<char>(c, std::locale("C")); });
 	return r;
 	}
 

@@ -19,9 +19,11 @@
 
 #pragma warning (disable:4710)
 #include "ColorImp.h"
-#include <fstream.h>
-#include <stdio.h>
-#include <iostream.h>
+#include <fstream>
+#include <cstdio>
+#include <iostream>
+
+using namespace std;
 
 extern const char* gIntroText;
 extern const char* gMiddleText;
